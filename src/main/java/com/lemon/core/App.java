@@ -1,4 +1,4 @@
-package lemon-core;
+package com.lemon.core;
 
 /**
  * Hello world!
