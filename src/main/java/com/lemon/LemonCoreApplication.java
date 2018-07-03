@@ -15,9 +15,12 @@ public class LemonCoreApplication{
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 new String[]{"/dubbo/dubbo-lemon-consumer.xml"});
         context.start();
+//        ExtensionLoader<Protocol> refprotocol = ExtensionLoader.getExtensionLoader(Protocol.class);
+//        Protocol protocol = refprotocol.getAdaptiveExtension();
+
         // obtain proxy object for remote invocation
         LogService logService = (LogService) context.getBean("logService");
         // execute remote invocation
-        logService.showVersion("world");
+//        logService.showVersion("world");
     }
 }
