@@ -21,6 +21,6 @@ public class LemonCoreApplication{
         // obtain proxy object for remote invocation
         LogService logService = (LogService) context.getBean("logService");
         // execute remote invocation
-//        logService.showVersion("world");
+        logService.showVersion("world");
     }
 }
