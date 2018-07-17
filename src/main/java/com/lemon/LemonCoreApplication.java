@@ -1,5 +1,6 @@
 package com.lemon;
 
+import com.alibaba.dubbo.rpc.service.EchoService;
 import com.fdubbo.rpc.LogService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -22,5 +23,9 @@ public class LemonCoreApplication{
         LogService logService = (LogService) context.getBean("logService");
         // execute remote invocation
         logService.showVersion("world");
+
+        //回声测试
+        EchoService echoService = (EchoService)context.getBean("logService");
+        System.out.println(echoService.$echo("Ok"));
     }
 }
